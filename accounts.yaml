@@ -1,2 +1,11 @@
 build:
   version: "3.0"
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/accountsdb
+    username: postgres
+    password: postgres
+  flyway:
+    locations: classpath:/db
+    baseline-on-migrate: true
