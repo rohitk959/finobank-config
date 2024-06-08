@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://paymentsdb:5433/paymentsdb
+    url: jdbc:postgresql://paymentsdb:5432/paymentsdb
     username: postgres
     password: postgres
   flyway:
