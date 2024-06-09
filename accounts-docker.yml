@@ -3,12 +3,3 @@ spring:
     url: jdbc:postgresql://accountsdb:5432/accountsdb
     username: postgres
     password: postgres
-
-eureka:
-  instance:
-    preferIpAddress: true
-  client:
-    fetchRegistry: true
-    registerWithEureka: true
-    serviceUrl:
-      defaultZone: http://eurekaserver:8070/eureka/
