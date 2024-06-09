@@ -3,3 +3,8 @@ spring:
     url: jdbc:postgresql://paymentsdb:5432/paymentsdb
     username: postgres
     password: postgres
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eurekaserver:8070/eureka/
