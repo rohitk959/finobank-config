@@ -2,12 +2,23 @@ server:
   port: 8072
 
 spring:
+  application:
+    name: gatewayserver
   cloud:
     gateway:
-        discovery:
-            locator:
-                enabled: false
-                lowerCaseServiceId: true
+      discovery:
+        locator:
+          enabled: false
+          lowerCaseServiceId: true
+      httpclient:
+        connect-timeout: 1000
+        response-timeout: 10s
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8060/realms/finobank
+          jwk-set-uri: http://localhost:8060/realms/finobank/protocol/openid-connect/certs
 
 eureka:
   instance:
@@ -19,19 +30,19 @@ eureka:
       defaultZone: ${EUREKA_SERVER_URL:http://localhost:8070/eureka/}
 
 management:
-    endpoints:
-        web:
-            exposure:
-                include: "*"
+  endpoints:
+    web:
+      exposure:
+        include: "*"
     endpoint:
-        gateway:
-            enabled: true
+      gateway:
+        enabled: true
     info:
-        env:
-            enabled: true
+      env:
+        enabled: true
 
 info:
-    app:
-        name: "gatewayserver"
-        description: "Finobank Gateway Server Application"
-        version: "1.0.0"
+  app:
+    name: "gatewayserver"
+    description: "Finobank Gateway Server Application"
+    version: "1.0.0"
