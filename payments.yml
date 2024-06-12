@@ -9,6 +9,10 @@ spring:
   flyway:
     locations: classpath:/db
     baseline-on-migrate: true
+  security.oauth2.resourceserver:
+    jwt:
+      issuer-uri: http://localhost:8060/realms/finobank
+      jwk-set-uri: http://localhost:8060/realms/finobank/protocol/openid-connect/certs
 
 management:
   endpoints:
