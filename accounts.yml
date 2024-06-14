@@ -16,6 +16,9 @@ spring:
       issuer-uri: http://localhost:8060/realms/finobank
       jwk-set-uri: http://localhost:8060/realms/finobank/protocol/openid-connect/certs
 
+hibernate:
+  dialect: org.hibernate.dialect.PostgreSQLDialect
+
 management:
   endpoints:
     web:
