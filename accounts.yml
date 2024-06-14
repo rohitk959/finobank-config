@@ -6,6 +6,8 @@ spring:
     url: jdbc:postgresql://localhost:5432/accountsdb
     username: postgres
     password: postgres
+  jpa:
+    show-sql: true
   flyway:
     locations: classpath:/db
     baseline-on-migrate: true
