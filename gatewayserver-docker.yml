@@ -1,0 +1,5 @@
+spring:
+  security.oauth2.resourceserver:
+    jwt:
+      issuer-uri: http://localhost:8060/realms/finobank
+      jwk-set-uri: http://host.docker.internal:8060/realms/finobank/protocol/openid-connect/certs
