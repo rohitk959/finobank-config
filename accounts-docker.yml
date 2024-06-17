@@ -3,6 +3,10 @@ spring:
     url: jdbc:postgresql://accountsdb:5432/accountsdb
     username: postgres
     password: postgres
+  security.oauth2.resourceserver:
+    jwt:
+      issuer-uri: http://localhost:8060/realms/finobank
+      jwk-set-uri: http://keycloak:8060/realms/finobank/protocol/openid-connect/certs
 
 eureka:
   client:
